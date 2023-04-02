@@ -22,6 +22,6 @@ www.pexels.com free stock images
 
 ## License
 
-- GitHub repository URL: https://github.com/cherah-petra/CP-Horiseon-Refactoring-Challenge-01
+- GitHub repository URL: https://github.com/cherah-petra/CP-Portfolio-Challenge-02/
 - License: license.txt
 
