@@ -25,3 +25,7 @@ www.pexels.com free stock images
 - GitHub repository URL: https://github.com/cherah-petra/CP-Portfolio-Challenge-02/
 - License: license.txt
 
+
+
+
+
