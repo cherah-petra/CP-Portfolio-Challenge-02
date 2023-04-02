@@ -1,162 +1,333 @@
-/* Global Styles */
+/* GLOBAL STYLES */
+
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	min-height: 100vh;
+}
+
+main {
+    margin: 40px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+	font-size: 20px;
+	color: #34495e;
+	text-align: left;
+	line-height: 1;
+
+  }
+
+h1 {
+	margin: 20px;
+	font-size: 44px;
+  	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	color: white;
+	font-family: 'Amatic SC', cursive, sans-serif;
+}
+
+h2 {
+	padding-bottom: 20px;
+	font-size: 28px;
+	font-family: 'Amatic SC', cursive;
+	color: rgb(14, 124, 111);
+  }
+
+h3 {
+	font-family: 'Handlee', cursive, sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 24px;
+ 	font-family: 'Amatic SC', cursive, sans-serif;
 }
 
 
 a {
-    color: #ffffff;
-    text-decoration: none;
+	text-decoration: none;
+	color: salmon;
 }
 
-p {
-    font-size: 16px;
-}
-
-h1 {     
-    display: inline-block;
-    font-size: 48px;
-    color: #d9dcd6;
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-h3 {
-    margin-bottom: 10px;
-    text-align: center;
+a:hover {
+	text-decoration: underline;
+	color: rgb(197, 72, 58);
 }
 
 
-h4 {
-    font-size: 20px;
-}
+/* Hero Image */
+
+#hero {
+	height: 200px;
+	width: 100%;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 25px;
+	background-image: url("/assets/img/pexels-teona-swift-6913376.jpg");
+	background-size: cover;
+	background-position: top;
+	color: white;
+	font-size: 28px;
+	font-weight: 700;
+  }
+  
+  .text-overlay {
+	position: absolute;
+	padding: 30px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(249, 126, 112, 0.60);
+	text-align: center;
+	font-family: 'Amatic SC', cursive, sans-serif;
+  
+  }
+
+/* Nav & Logo */  
 
 header {
-    background-color: rgb(1, 73, 1);
-    padding: 40px;
-    color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1%;
+	background-color: rgb(37, 127, 117);
+}
+  
+  
+  nav ul {
+	display: flex;
+	justify-content: space-between;
+	min-width: 280px;
   }
+  
+  nav a {
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: 'Handlee', cursive, sans-serif;
+	font-size: 24px;
+	padding: 10px;
+  }
+  
+  nav a:hover {
+	color: rgb(248, 183, 176);
+	text-decoration: none;
+  }
+  
 
-.main-nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0; 
-    background: deepskyblue;
-  }
-  
-  .main-nav  a {
-    text-decoration: none;
-    display: block;
-    padding: 1em;
-    color: white;
-  }
-  
-  .main-nav  a:hover {
-    background: #1565C0;
-  }
-  
- 
-main {
-    margin: auto;
+/* Section Layout */ 
+
+.section-header { 
+	display:flex; 
+	flex-wrap:wrap; 
 }
 
-.hero-image {
-    background-image: url("/assets/img/flowerbanner.jpg");
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.section-label {
+	border-right: solid 4px salmon; 
+	flex: 0 1 auto;
+	width: 200px;
+	text-align: right;
+	padding-right: 20px;
+	padding-top: 20px;
+	margin: 10px;
+}
+
+.section-content {
+	flex: 1; 
+	flex-wrap: wrap;
+	padding: 30px;
+	background-color: rgb(160, 216, 209);
+	border: 1px solid rgb(160, 216, 209);
+	border-radius: 4px;
+	margin: 10px;
+}
+
+.section-content-wh {
+	flex: 1; 
+	flex-wrap: wrap;
+	padding: 30px;
+	background-color: rgb(255, 255, 255);
+	margin: 0px;
+	text-align: center;
+	justify-content: left;
+}
+
+.section-content img {
+	float: right;
+	margin: 5px;
+	width: 100%;
+	max-width: 300px;
+}
+
+/* WORK GALLERY */
+
+.column {
+	position: relative;
+	float: left;
+	width: 25%;
+	padding: 5px;
   }
   
-  .hero-text {
-    text-align: right;
-    width: 400px;
-    padding: 20px;
-    position: relative;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgb(241, 148, 164, .40);
-    font-size: 42px;
+  .column img {
+	width: 100%;
+	border-radius: 4px;
+	}
+	
+
+  .text-block {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: rgb(250, 128, 114, 0.6);
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+  }  
+  
+  .work-full-container {
+	position: relative;
+	text-align: center;
+	color: white;
+  }
+  
+  .work-full-container img {
+  	width: 100%;
+  	max-width: 500px;
+  	border-radius: 4px;
   }
 
-  .flex-container {
-    /* We first create a flex layout context */
-    display: flex;
-    
-    /* Then we define the flow direction 
-       and if we allow the items to wrap 
-     * Remember this is the same as:
-     * flex-direction: row;
-     * flex-wrap: wrap;
-     */
-    flex-flow: row wrap;
-    
-    /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
-    
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  .work-full-label {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color:  rgb(250, 128, 114, 0.6);
+	padding: 20px;
+  }
+
+  
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
   }
   
-  .flex-item {
-    background: tomato;
-    width: 30%;
-    height: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-  }
-  
-  .flex-item2 {
-    background: blue;
-    width: 70%;
-    height: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-  }
-  
+
 /* Footer */
 
 footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
+	background: rgb(250,128,114);
+	background: linear-gradient(180deg, rgba(250,128,114,1) 0%, rgba(198,76,62,1) 43%, rgba(142,61,52,1) 100%);
+	height: 100px;
+	padding: 20px;
+  }
+  
+  footer p {
+	color: white;
+	text-align: center;
+	}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media only screen and (max-width: 280px)  {
+
+
+.text-block {
+	display: none;
 }
 
-@media all and (max-width: 800px) {
-  .main-nav {
-    justify-content: space-around;
-  }
+.work-full-label {
+display: none;
+
 }
 
-@media all and (max-width: 600px) {
-  .main-nav {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  .main-nav a { 
-    text-align: center; 
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255,0.3); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-  }
+}
+@media only screen and (max-width: 820px) and (min-width: 280px)  {
+	
+	header {
+		flex-direction: column;
+	  }
+	
+	  main {
+		max-width: 1200px;
+	  }
+	
+
+	nav a {
+
+		font-size: 4vw;
+
+
+	}
+
+	.work-full-label, .text-block {
+		padding: 5px;
+		background-color: transparent;
+
+	  }
+
+
+
+	.section-label {
+		border-bottom: solid 4px salmon; 
+		border-right: 0;
+		flex: 0 1 auto;
+		width: 100%;
+		text-align: center;
+		font-size: 28px;
+		font-family: 'Amatic SC', cursive;
+		color: rgb(14, 124, 111);
+		margin: 0px;
+	}
+
+	.section-content img {
+		align-items: flex-start;	
+		margin: 5px;
+		width: 100%;
+		max-width: 200px;
+	}	
+
+	.section-content-wh {
+		display: flex;
+		flex: 1; 
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 20px;
+		background-color: rgb(255, 255, 255);
+		margin: 0px;
+		text-align: center;
+	}
+
+
+	.work-full-container {
+		width: 100%;
+  	}
+
+	.row {
+		width: 80%;
+	}
+	.column {
+		width: 80%;
+	} 
+
+
+}
+
