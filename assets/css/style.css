@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #d9dcd6;
+    background-color: #ffffff;
 }
 
 
@@ -41,96 +41,99 @@ h4 {
     font-size: 20px;
 }
 
-/* Header & Navigation */
-
 header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    background-color: rgb(1, 73, 1);
+    padding: 40px;
     color: #ffffff;
-}
+  }
 
 .main-nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    list-style-type: none;
-}
-
-.main-nav li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-
-/* Hero Banner */
-
-#hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* Images and Content Sections */
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-main {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-article {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-article img {
-    max-height: 200px;
-}
-
-.aside {
-    margin-right: 20px;
-    margin-bottom: 32px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-    color: #ffffff;
-}
-
-.benefit {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit img {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0; 
+    background: deepskyblue;
+  }
+  
+  .main-nav  a {
+    text-decoration: none;
     display: block;
-    margin: 10px auto;
-    max-width: 150px;
+    padding: 1em;
+    color: white;
+  }
+  
+  .main-nav  a:hover {
+    background: #1565C0;
+  }
+  
+ 
+main {
+    margin: auto;
 }
 
+.hero-image {
+    background-image: url("/assets/img/flowerbanner.jpg");
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: right;
+    width: 400px;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgb(241, 148, 164, .40);
+    font-size: 42px;
+  }
+
+  .flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .flex-item {
+    background: tomato;
+    width: 30%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  .flex-item2 {
+    background: blue;
+    width: 70%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+  
 /* Footer */
 
 footer {
@@ -140,3 +143,20 @@ footer {
     text-align: center;
 }
 
+@media all and (max-width: 800px) {
+  .main-nav {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .main-nav {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .main-nav a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
