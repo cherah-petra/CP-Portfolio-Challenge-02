@@ -12,7 +12,7 @@ Developed a one-page portfolio to showcase my work history and examples of proje
 
 ## Usage
 
-File can be downloaded and used to gain inside into refactoring code and applying accessibility standards. 
+File can be downloaded and used to gain inside into advanced css and responsive navigation and media queries.
 
 ![CP Portfolio Full Screenshot](assets/img/screencapture-127-0-0-1-5502-index-html-2023-04-02-15_10_44.png)
 
